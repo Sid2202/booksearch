@@ -29,7 +29,7 @@ prompt.format(input=input_text)
 
 ##OPENAI LLM MODELS
 
-llm=OpenAI(temperature=0.8)
+llm=openai(temperature=0.8)
 chain=LLMChain(llm=llm, prompt=prompt, verbose=True)
 
 if input_text:
