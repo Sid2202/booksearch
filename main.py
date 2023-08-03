@@ -4,7 +4,7 @@ import re
 import openai
 from langchain import PromptTemplate
 from langchain.chains import LLMChain
-
+from langchain.llms import OpenAI
 import streamlit as st
 ## streamlit framework
 
@@ -29,7 +29,7 @@ prompt.format(input=input_text)
 
 ##OPENAI LLM MODELS
 
-llm=openai(temperature=0.8)
+llm=OpenAI(temperature=0.8)
 chain=LLMChain(llm=llm, prompt=prompt, verbose=True)
 
 if input_text:
